@@ -6,6 +6,7 @@
       name="description"
       content="WEBSTUDIOS description meta tag content"
     />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WEBSTUDIO</title>
     <!-- Normalize -->
     <link
@@ -43,6 +44,16 @@
             <li><a class="header-item link" href="">Contacts</a></li>
           </ul>
         </nav>
+        <!-- phone-menu -->
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="menu-icon" width="32" height="32">
+            <use href="./images/icons.svg#menu"></use>
+          </svg>
+        </button>
 
         <!-- Contacts -->
         <address class="contacts">
@@ -142,7 +153,11 @@
             <li class="working-item">
               <img
                 class="working-img site"
-                src="./images/working/img1.jpg"
+                srcset="
+                  ./images/working/decktop@1x.png 1x,
+                  ./images/working/decktop@2x.png 2x
+                "
+                src="./images/we-doing/decktop@1x.png"
                 alt="Сomputer site"
                 width="360"
                 height="300"
@@ -152,7 +167,11 @@
             <li class="working-item">
               <img
                 class="working-img mess"
-                src="./images/working/img2.jpg"
+                srcset="
+                  ./images/working/mess@1x.png 1x,
+                  ./images/working/mess@2x.png 2x
+                "
+                src="./images/working/mess@1x.png"
                 alt="Messenger"
                 width="360"
                 height="300"
@@ -162,7 +181,11 @@
             <li class="working-item">
               <img
                 class="working-img tel"
-                src="./images/working/img3.jpg"
+                srcset="
+                  ./images/working/phonest@1x.png 1x,
+                  ./images/working/phonest@2x.png 2x
+                "
+                src="./images/working/phonest@1x.png"
                 alt="Telephone sites"
                 width="360"
                 height="300"
@@ -175,12 +198,16 @@
       <!-- Team section-->
       <section class="section team">
         <div class="team-container container">
-          <h2 class="title-team">Our Team</h2>
+          <h2 class="title-team title">Our Team</h2>
           <ul class="team-list list card-set">
             <li class="team-item card-set-item">
               <img
                 class="team-img p-designer"
-                src="./images/team/img(0).jpg"
+                srcset="
+                  ./images/team/mark@1x.png 1x,
+                  ./images/team/mark@2x.png 2x
+                "
+                src="./images/team/mark@1x.png"
                 alt="A dark-haired man with a thick black beard in a blue collared shirt"
                 width="264"
                 height="260"
@@ -247,7 +274,11 @@
             <li class="team-item card-set-item">
               <img
                 class="team-img developer"
-                src="./images/team/img(1).jpg"
+                srcset="
+                  ./images/team/tom@1x.png 1x,
+                  ./images/team/tom@2x.png 2x
+                "
+                src="./images/team/tom@1x.png"
                 alt="smiling fair-haired man with light stubble in a blue shirt"
                 width="264"
                 height="260"
@@ -314,7 +345,11 @@
             <li class="team-item card-set-item">
               <img
                 class="team-img marketing"
-                src="./images/team/img(2).jpg"
+                srcset="
+                  ./images/team/camila@1x.png 1x,
+                  ./images/team/camila@2x.png 2x
+                "
+                src="./images/team/camila@1x.png"
                 alt="a girl with long dark hair in a pink sweater"
                 width="264"
                 height="260"
@@ -381,8 +416,13 @@
             <li class="team-item card-set-item">
               <img
                 class="team-img ui-designer"
-                src="./images/team/img(3).jpg"
-                alt="smiling dark-haired man in a gray t-shirt"
+                srcset="
+                  ./images/team/daniel@1x.png 1x,
+                  ./images/team/daniel@2x.png 2x
+                "
+                src="./images/team/daniel@1x.png"
+                alt="smiling dark-haired man in
+              a gray t-shirt"
                 width="264"
                 height="260"
               />
@@ -451,7 +491,7 @@
       <!-- customers section -->
       <section class="customers-section">
         <div class="container">
-          <h2 class="customers-title">Customers</h2>
+          <h2 class="customers-title title">Customers</h2>
           <ul class="list customers-list">
             <li class="customers-item">
               <a
@@ -701,6 +741,109 @@
         </form>
       </div>
     </div>
+    <!-- Mobile menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-close js-close-menu">
+        <svg class="modal-icon" width="8" height="8">
+          <use href="./images/icons.svg#close"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-nav-list list">
+        <li class="mobile-nav-item">
+          <a class="mobile-nav-link link" href="./index.html" target="_blank"
+            >Studio</a
+          >
+        </li>
+        <li class="mobile-nav-item">
+          <a
+            class="mobile-nav-link link"
+            href="./portfolio.html"
+            target="_blank"
+            >Portfolio</a
+          >
+        </li>
+        <li class="mobile-nav-item">
+          <a class="mobile-nav-link link" href="" target="_blank">Contacts</a>
+        </li>
+      </ul>
+      <div class="mobile-contacts">
+        <address class="mobile-address">
+          <ul class="mobile-address-list list">
+            <li class="mobile-address-item">
+              <a class="mobile-address-link link" href="tel:+110001111111"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+            <li class="mobile-address-item">
+              <a
+                class="mobile-address-link link"
+                href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+        </address>
+        <ul class="list network-mobile-list">
+          <li class="network-mobile-item">
+            <a
+              class="link network-mobile-link"
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="network-icon" width="24" height="24">
+                <use href="./images/icons.svg#instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="network-mobile-item">
+            <a
+              class="link network-mobile-link"
+              href="https://twitter.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="network-icon" width="24" height="24">
+                <use href="./images/icons.svg#twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="network-mobile-item">
+            <a
+              class="link network-mobile-link"
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="network-icon" width="24" height="24">
+                <use href="./images/icons.svg#facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="network-mobile-item">
+            <a
+              class="link network-mobile-link"
+              href="https://www.linkedin.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="network-icon" width="24" height="24">
+                <use href="./images/icons.svg#linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- JS script -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
