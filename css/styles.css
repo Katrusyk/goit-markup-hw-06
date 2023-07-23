@@ -152,19 +152,13 @@ card-set-item {
   border-bottom: 1px solid var(--cornflower);
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  padding: 24px 16px;
 }
 
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 16px;
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1158px) {
-  .header-container {
-    padding: 16px;
-  }
 }
 
 .header-nav {
@@ -240,17 +234,19 @@ card-set-item {
   font-style: normal;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1158px) {
-  .contacts-item:not(:last-child) {
-    margin-bottom: 12px;
+@media only screen and (min-width: 768px) {
+  .contacts-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
   }
 }
 
 @media only screen and (min-width: 1158px) {
   .contacts-list {
-    display: flex;
-    align-items: center;
     gap: 40px;
+    flex-direction: row;
   }
 }
 
@@ -264,6 +260,7 @@ card-set-item {
     line-height: 1.17;
     letter-spacing: 0.48px;
     color: var(--slate);
+    padding: 0;
 
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -273,12 +270,15 @@ card-set-item {
 .contacts-item:focus {
   color: var(--icon-hover-color);
 }
+
 @media only screen and (min-width: 1158px) {
   .contacts-item {
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.32px;
+
+    padding: 24px 0;
   }
 }
 
@@ -325,7 +325,6 @@ card-set-item {
   letter-spacing: 0.02em;
 
   display: block;
-  padding: 24px 0;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -351,19 +350,19 @@ card-set-item {
   line-height: 1.5;
   letter-spacing: 0.04em;
 
-  max-width: 1440px;
+  max-width: 448px;
 
   padding-top: 112px;
   padding-bottom: 112px;
 
-  margin: 0 auto 48px auto;
+  margin: 0 auto;
 
   background-image: linear-gradient(
       to bottom,
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url('../images/order/people-office@1x.png');
+    url('../images/order/people-office-tell@1x.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -378,7 +377,7 @@ card-set-item {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url('../images/order/people-office@2x.png');
+      url('../images/order/people-office-tell@2x.png');
   }
 }
 
@@ -390,7 +389,7 @@ card-set-item {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url('../images/order/people-office@1x.png');
+      url('../images/order/people-office-tab@1x.png');
   }
 
   @media (min-device-pixel-ratio: 2),
@@ -402,7 +401,7 @@ card-set-item {
           rgba(46, 47, 66, 0.7),
           rgba(46, 47, 66, 0.7)
         ),
-        url('../images/order/people-office@2x.png');
+        url('../images/order/people-office-tab@2x.png');
     }
   }
 }
@@ -440,8 +439,6 @@ card-set-item {
 
     padding-top: 188px;
     padding-bottom: 188px;
-
-    margin-bottom: 60px;
   }
 }
 
@@ -505,6 +502,7 @@ card-set-item {
 
 /* benefits section */
 .benefits {
+  padding-top: 96px;
   padding-bottom: 96px;
 }
 
@@ -602,17 +600,18 @@ card-set-item {
   }
 }
 
-/* .text {
+.text {
   color: var(--slate);
   line-height: 1.5;
   font-size: 16px;
-} */
+}
 
 .benefits-title-par {
+  color: var(--slate);
   font-size: 16px;
-  font-weight: 500px;
+  font-weight: 500;
   line-height: 1.5;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.32px;
 }
 
 /**
@@ -709,6 +708,7 @@ card-set-item {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 
   max-width: 264px;
+  gap: 72px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -724,10 +724,6 @@ card-set-item {
 }
 
 @media only screen and (max-width: 767.8px) {
-  .team-item:not(:last-child) {
-    margin-bottom: 72px;
-  }
-
   .team-item {
     margin-left: auto;
     margin-right: auto;
@@ -973,12 +969,6 @@ card-set-item {
   }
 }
 
-@media only screen and (min-width: 1158px) {
-  .exhortation {
-    margin-right: 40px;
-  }
-}
-
 .footer-container-social {
 }
 
@@ -1005,6 +995,7 @@ card-set-item {
 
 /* footer-form */
 .footer-right {
+  width: 100%;
 }
 
 .footer-text-subscribe {
@@ -1013,6 +1004,7 @@ card-set-item {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.32px;
+  text-align: center;
 
   margin-bottom: 16px;
 }
@@ -1036,10 +1028,11 @@ card-set-item {
 .footer-form-field {
   position: relative;
   display: block;
+  width: 100%;
 }
 
 .footer-form-input {
-  width: 398px;
+  width: 100%;
   height: 40px;
   padding: 8px 16px;
 
@@ -1658,6 +1651,23 @@ card-set-item {
   letter-spacing: 0.4px;
 
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tel {
+  color: var(--iris);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.72px;
+  text-transform: capitalize;
+}
+
+.email {
+  color: var(--slate, #434455);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.4px;
 }
 
 .mobile-address-link:hover,
